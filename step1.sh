@@ -46,7 +46,7 @@ p2p-addr: :$((1734+${tCnt}))
 password-file: /var/lib/bee/password
 swap-initial-deposit: "10000000000000000"
 verbosity: 5
-swap-endpoint: ${ep}
+swap-endpoint: http://38.91.107.65:8545
 full-node: true
 EOF
 cp cashout.sh cashout${tCnt}.sh
