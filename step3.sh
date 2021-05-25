@@ -2,10 +2,10 @@ tCnt=`cat .showcnt.txt`
 ip=`ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
 password=`cat ./keys/${ip}-password.txt`
 #echo "${password}"
-wget https://github.com/ethersphere/exportSwarmKey/releases/download/v0.1.0/export-swarm-key-linux-386 && chmod 777 export-swarm-key-linux-386
 #echo "ip,num,dpi_port,address,chequebook,privatekey" > ${ip}.txt
 for ((i=1; i<=tCnt; i ++))
 do
+cp /var/lib/bee/node${i}/keys/swarm.key ./keys/node${i}
 dpi_port=`cat node${i}.yaml | grep 'debug-api-addr: 127.0.0.1:' | awk -F ':' '{print $3}'`
 #echo "节点${i}的端口为：${dpi_port}"
 #echo "节点${i}的钱包地址和合约地址:"

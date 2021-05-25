@@ -21,3 +21,4 @@ mkdir -p keys/node${i}
 cp /var/lib/bee/node${i}/keys/swarm.key ./keys/node${i}
 screen -ls
 done
+wget https://github.com/ethersphere/exportSwarmKey/releases/download/v0.1.0/export-swarm-key-linux-386 && chmod 777 export-swarm-key-linux-386
