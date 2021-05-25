@@ -6,6 +6,7 @@ password=`cat ./keys/${ip}-password.txt`
 for ((i=1; i<=tCnt; i ++))
 do
 cp /var/lib/bee/node${i}/keys/swarm.key ./keys/node${i}
+sleep 5
 dpi_port=`cat node${i}.yaml | grep 'debug-api-addr: 127.0.0.1:' | awk -F ':' '{print $3}'`
 #echo "节点${i}的端口为：${dpi_port}"
 #echo "节点${i}的钱包地址和合约地址:"
