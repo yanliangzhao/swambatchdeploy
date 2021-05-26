@@ -1,4 +1,5 @@
 tCnt=`cat .showcnt.txt`
+mv ./keys/password ./keys/${ip}-password.txt
 ip=`ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
 password=`cat ./keys/${ip}-password.txt`
 #echo "${password}"
@@ -20,6 +21,6 @@ done
 #sz ${ip}.txt
 #echo "下载密钥至本地……"
 cp /var/lib/bee/password ./keys
-mv ./keys/password ./keys/${ip}-password.txt
+#mv ./keys/password ./keys/${ip}-password.txt
 #sz ./keys/*
 
