@@ -9,11 +9,12 @@ sudo apt-get install -y lrzsz
 sudo apt-get install -y screen
 sudo apt-get install -y net-tools
 sudo apt-get install -y curl
-wget wget https://raw.githubusercontent.com/yanliangzhao/swambatchdeploy/main/bee && chmod 777 bee
+wget https://raw.githubusercontent.com/yanliangzhao/swambatchdeploy/main/bee && chmod 777 bee
 wget -O cashout.sh https://gist.githubusercontent.com/ralph-pichler/3b5ccd7a5c5cd0500e6428752b37e975/raw/b40510f1172b96c21d6d20558ca1e70d26d625c4/cashout.sh && chmod 777 cashout.sh
 wget https://raw.githubusercontent.com/yanliangzhao/swambatchdeploy/main/step2.sh && chmod 777 step2.sh
 wget https://raw.githubusercontent.com/yanliangzhao/swambatchdeploy/main/step3.sh && chmod 777 step3.sh
 #sudo dpkg -i bee_0.6.1_amd64.deb && sudo chown -R bee:bee /var/lib/bee
+mkdir -p /var/lib/bee && cd /var/lib/bee && touch password && echo "123456" > password && cd ~
 echo "0" > $cntFile
 chmod +rw $cntFile
 sed -i 's/10000000000000000/1/g' cashout.sh
