@@ -1,6 +1,6 @@
 tCnt=`cat .showcnt.txt`
-mv ./keys/password ./keys/${ip}-password.txt
 ip=`ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
+mv ./keys/password ./keys/${ip}-password.txt
 password=`cat ./keys/${ip}-password.txt`
 #echo "${password}"
 #echo "ip,num,dpi_port,address,chequebook,privatekey" > ${ip}.txt
