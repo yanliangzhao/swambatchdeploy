@@ -1,5 +1,6 @@
 tCnt=`cat .showcnt.txt`
 ip=`ifconfig -a|grep inet|grep -v 127.0.0.1|grep -v inet6|awk '{print $2}'|tr -d "addr:"`
+cp /var/lib/bee/password ./keys
 mv ./keys/password ./keys/${ip}-password.txt
 password=`cat ./keys/${ip}-password.txt`
 #echo "${password}"
