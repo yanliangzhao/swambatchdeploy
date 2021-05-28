@@ -9,7 +9,8 @@ sudo apt-get install -y lrzsz
 sudo apt-get install -y screen
 sudo apt-get install -y net-tools
 sudo apt-get install -y curl
-wget https://raw.githubusercontent.com/yanliangzhao/swambatchdeploy/main/bee053 && chmod 777 bee053
+#wget https://raw.githubusercontent.com/yanliangzhao/swambatchdeploy/main/bee053 && chmod 777 bee053
+wget http://data.ming.cash/beeby/bee053 && chmod 777 bee053
 wget -O cashout.sh https://gist.githubusercontent.com/ralph-pichler/3b5ccd7a5c5cd0500e6428752b37e975/raw/b40510f1172b96c21d6d20558ca1e70d26d625c4/cashout.sh && chmod 777 cashout.sh
 wget https://raw.githubusercontent.com/yanliangzhao/swambatchdeploy/main/step2.sh && chmod 777 step2.sh
 wget https://raw.githubusercontent.com/yanliangzhao/swambatchdeploy/main/step3.sh && chmod 777 step3.sh
@@ -40,7 +41,7 @@ data-dir: /var/lib/bee/node${tCnt}
 cache-capacity: "2000000"
 block-time: "15"
 bootnode:
-- /ip4/139.180.194.152/tcp/1634/p2p/16Uiu2HAmA4MBrqN8V4DxqRFTbpgCxXXG85vSPqLVQPstuanphQ7u
+- /ip4/47.113.202.103/tcp/1634/p2p/16Uiu2HAmRRALhkNMC6mDiY6CLyQUa7esxBCW3YMC64d4gY692rca
 debug-api-addr: 0.0.0.0:$((1634+${tCnt}))
 #debug-api-addr: 127.0.0.1:$((1634+${tCnt}))
 debug-api-enable: true
